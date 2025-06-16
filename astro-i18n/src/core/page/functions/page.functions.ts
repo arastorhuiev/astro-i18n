@@ -224,7 +224,7 @@ async function getSrcPageTranslations(
 		if (!match) continue
 
 		const locale =
-			match[2] || throwError(new InvalidTranslationFilePattern())
+			match[2] 
 		const translatedName = match[3] ? match[3].replace(".", "") : null
 		const localeTranslations = await importJson(`${i18nDir}/${content}`)
 		assert(
